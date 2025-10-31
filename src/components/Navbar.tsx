@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
-import { Home, Shield, LogOut, User } from 'lucide-react';
+import { Home, LogOut, User } from 'lucide-react';
 
 const Navbar = () => {
-  const { user, isAdmin, signOut } = useAuth();
+  const { user, signOut } = useAuth();
   const navigate = useNavigate();
 
   const handleSignOut = async () => {
@@ -20,26 +20,16 @@ const Navbar = () => {
           StayScape
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <Link to="/listings">
-            <Button variant="ghost">Browse Listings</Button>
+            <Button variant="ghost">Listings</Button>
           </Link>
 
           {user ? (
-            <>
-              {isAdmin && (
-                <Link to="/admin">
-                  <Button variant="secondary">
-                    <Shield className="mr-2 h-4 w-4" />
-                    Admin Panel
-                  </Button>
-                </Link>
-              )}
-              <Button variant="outline" onClick={handleSignOut}>
-                <LogOut className="mr-2 h-4 w-4" />
-                Sign Out
-              </Button>
-            </>
+            <Button variant="outline" onClick={handleSignOut}>
+              <LogOut className="mr-2 h-4 w-4" />
+              Sign Out
+            </Button>
           ) : (
             <Link to="/auth">
               <Button variant="default">

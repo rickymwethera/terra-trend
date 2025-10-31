@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import Navbar from '@/components/Navbar';
 import ListingCard from '@/components/ListingCard';
 import { Loader2 } from 'lucide-react';
 
@@ -39,16 +38,14 @@ const Listings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+        <div className="text-center mb-10 ml-2">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Discover Amazing Places
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Browse through our curated collection of beautiful properties
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mt-5">
+            Find your perfect stay from our curated collection of unique properties
           </p>
         </div>
 

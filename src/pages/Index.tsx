@@ -1,23 +1,20 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import Navbar from '@/components/Navbar';
 import { ArrowRight, MapPin, Shield, Heart } from 'lucide-react';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-      
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent/5 to-background py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-accent/5 to-background py-24 pt-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center pl-3">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Discover Your Perfect Stay
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Book unique homes and experiences around the world with StayScape
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pr-5">
               <Link to="/listings">
                 <Button size="lg" className="text-lg group">
                   Explore Listings
